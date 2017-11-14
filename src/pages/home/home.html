@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="primary">
+
+      <ion-buttons end>
+          <button ion-button icon-only (click)="showPopOver()">
+            <ion-icon name="more"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>
+     My Posts
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content > 
+  
+  <ion-card padding color="secondary">
+      <ion-item (click)="navAddPostPage()">What's on your mind</ion-item>
+  </ion-card>
+
+
+
+
+          <ion-item  no-lines *ngFor="let posts of posts | async" text-wrap>
+            <ion-card (click)=getView(posts.id)>
+              <ion-card-header>
+                 {{posts.data.email}}
+              </ion-card-header>
+              <ion-card-content>
+                {{posts.data.postContent}}
+                <br>
+                {{posts.data.timeAdded}}
+              </ion-card-content>
+              </ion-card>
+          </ion-item>
+</ion-content>

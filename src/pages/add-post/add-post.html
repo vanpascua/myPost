@@ -1,0 +1,17 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Add New Post</ion-title>
+    <ion-buttons end><button (click)="addPost(item)"ion-button>Post</button></ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content >
+  <ion-card padding color="secondary" >
+    <ion-item>
+        <ion-input type="Text" placeholder="What's on your mind" [(ngModel)]="item.postContent"></ion-input>
+      </ion-item>
+  </ion-card>
+</ion-content>

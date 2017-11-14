@@ -1,0 +1,33 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Post Preview</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card >
+        <ion-card-header>
+          Vic Vandolf Pascua
+        </ion-card-header>
+        <ion-card-content>
+            {{ (post | async)?.postContent}}
+          <br>
+          {{ (post | async)?.timeAdded}}
+        </ion-card-content>
+        </ion-card>
+
+  <ion-card padding>
+    <button ion-button color="danger" block (click)="deletePost()">Delete</button>
+  </ion-card>
+  
+
+
+
+
+
+  
+
+</ion-content>
